@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   background-color: transparent !important;
 }
 
-.callout[data-callout="def"] {
+.callout[data-callout="def"], .callout[data-callout="definition"], .callout[data-callout="Definition"] {
   --callout-color: var(--color-purple-rgb);
   border-color: var(--color-purple-rgb);
   border-style: solid !important;
@@ -35,7 +35,28 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   }
 }
 
-.callout[data-callout="lem"] {
+callout[data-callout="rmk"], .callout[data-callout="remark"], .callout[data-callout="Remark"] {
+  --callout-color: var(--color-cyan-rgb);
+  border-color: var(--color-cyan-rgb);
+  border-style: solid !important;
+  .callout-icon { 
+    display: none;
+  }
+  .callout-title { 
+    display: block;
+  }
+  .callout-title::before {
+    content: "Remark";    
+    display: block !important;
+    font-weight: normal;
+    color: rgba(var(--callout-color), 1) !important;
+    font-size: 85%;
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+}
+
+.callout[data-callout="lem"], .callout[data-callout="Lemma"], .callout[data-callout="lemma"] {
   --callout-color: var(--color-green-rgb);
   border-color: rgba(var(--callout-color), 1);
   border-style: solid !important;
@@ -56,6 +77,26 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   }
 }
 
+.callout[data-callout="Theorem"], .callout[data-callout="theorem"], .callout[data-callout="thm"] {
+  --callout-color: var(--color-blue-rgb);
+  border-color: var(--color-blue-rgb);
+  border-style: solid !important;
+  .callout-icon {
+    display: none;
+  }
+  .callout-title {
+    display: block;
+  }
+  .callout-title::before {
+    content: "Theorem";
+    display: block !important;
+    font-weight: normal;
+    color: rgba(var(--callout-color), 1) !important;
+    font-size: 85%;
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+}
 
 .logo {
   position: fixed;
