@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
+
+.markdown-preview-section > *, .inline-title{
+    font-family: 'Vollkorn';
+  // background-color: red !important;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
+  color: var(--color-red) !important;
+}
+
+.tag {
+  color: var(--color-gray) !important;
+  background-color: transparent !important;
+}
+
+.callout[data-callout="def"] {
+  --callout-color: var(--color-purple-rgb);
+  border-color: var(--color-purple-rgb);
+  border-style: solid !important;
+  .callout-icon {
+    display: none;
+  }
+  .callout-title {
+    display: block;
+  }
+  .callout-title::before {
+    content: "Definition";
+    display: block !important;
+    font-weight: normal;
+    color: rgba(var(--callout-color), 1) !important;
+    font-size: 85%;
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+}
+
+.callout[data-callout="lem"] {
+  --callout-color: var(--color-green-rgb);
+  border-color: rgba(var(--callout-color), 1);
+  border-style: solid !important;
+  .callout-icon { 
+    display: none; 
+  }
+  .callout-title { 
+    display: block;
+  }
+  .callout-title::before {
+    content: "Lemma";   
+    display: block !important;
+    font-weight: normal;
+    color: rgba(var(--callout-color), 1) !important;
+    font-size: 85%;
+    text-transform: lowercase;
+    font-variant: small-caps; 
+  }
+}
+
 
 .logo {
   position: fixed;
